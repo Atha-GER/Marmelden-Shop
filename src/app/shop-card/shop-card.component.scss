@@ -1,0 +1,126 @@
+.shop-card{
+    margin-top: 10%;
+    background-color: rgb(245, 227, 185);
+    height: 460px;
+    width: 16vw;
+
+    border-radius: 30px;
+
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+
+border: solid 2px;
+box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.274)   ;
+}
+
+.shop-card-pic{
+    background-color: rgba(137, 153, 79, 0.253);
+    width: 80%;
+    height: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+}
+
+p{
+    text-align: center;
+}
+
+
+
+
+
+.glas-bild{
+    
+    width: 90%;
+    height: 90%;
+    
+}
+
+
+
+/* AddMORE */
+
+.shop-card-addmore{
+    background-color: rgb(245, 227, 185);
+    width: 80%;
+    height: 3vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+    padding: 3px;
+
+    border: solid 2px;
+}
+
+.shop-card-addmore-minus, .shop-card-addmore-plus{
+    font-size: 20px;
+    font-weight: bolder;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.253);
+}
+
+
+.shop-card-addmore-minus:hover, .shop-card-addmore-plus:hover{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.shop-card-addmore-minus:active, .shop-card-addmore-plus:active{
+    transform: translateY(2px);
+    text-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.253);
+}
+
+.shop-card-addmore-minus:active{
+    color: red;
+}
+
+.shop-card-addmore-plus:active{
+    color: green;
+}
+/* AddMORE ENDE */
+
+
+
+
+/* BUY */
+
+
+
+.shop-card-buy{
+    background-color: rgb(7, 7, 7);
+    width: 70%;
+    height: 3vh;
+
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.144);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.1s ease-in-out;
+
+
+}
+
+.shop-card-buy-text{
+    
+    color: white;
+    font-size: 17px;
+}
+
+.shop-card-buy:hover{
+    transform: translateY(2px);
+}
+
+.shop-card-buy:active{
+    background-color: green;
+    transform: translateY(4px);
+}

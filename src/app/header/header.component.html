@@ -1,0 +1,40 @@
+<div class="header">
+
+<div  class="header-titel">
+    <h1 class="header-titel-text">flavo</h1>
+</div>
+
+<div class="header-nav">
+    <h1  class="header-nav-text">SHOP</h1>
+    <h1 class="header-nav-text">OUR STORY</h1>
+    <h1 class="header-nav-text">Kontakt</h1>
+</div>
+
+
+
+<div class="header-shop-kasten">
+
+<div  (click)=" WarenkorbAktiv()"  class="header-shop-icon">
+    <img (click)="animationClickF()" [ngClass]="{'header-shop-icon-bild-Animation':animationClick == true  }" class="header-shop-icon-bild" src="" [src]="warenkorbBild">
+</div>
+
+<app-warenkorb 
+
+*ngIf="Warenkorb == true"></app-warenkorb>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

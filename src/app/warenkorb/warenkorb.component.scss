@@ -1,0 +1,97 @@
+.warenkorb-kasten{
+margin-top: 2%;
+
+    background-color: rgb(238, 238, 238);
+    height: 25vw;
+    width: 13vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+h2,h3{
+    font-size: 1.3vw;
+}
+
+li{
+    font-size: 1.1vw;
+}
+
+
+
+
+/* Warenkorb Titel */
+
+
+
+.warenkorb-kasten-titel{
+    background-color: rgba(0, 0, 0, 0.233);
+    width: 90%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* Warenkorb Artikel start */
+
+.warenkorb-kasten-artikel{
+    background-color: rgba(0, 0, 0, 0.438);
+    width: 90%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* Warenkorb Rechnungsdaten start */
+
+.warenkorb-kasten-rechnungsdaten{
+    background-color: rgba(0, 0, 0, 0.418);
+    width: 90%;
+    height: 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------*/
+
+/* Warenkorb Button start */
+
+.warenkorb-kasten-button{
+    background-color: orange;
+    height: 10%;
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20%;
+
+    transition: 0.3s;
+}
+
+.warenkorb-kasten-button:hover{
+    background-color: rgb(5, 138, 0);
+}
+
+.warenkorb-kasten-button:active{
+    background-color: green;
+    transform: translateY(3px);
+}
