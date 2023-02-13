@@ -40,12 +40,12 @@ set cardAnzahl(Zahl: number) {
   this.dg.cardAnzahlen[this.index] = Zahl;
 }
 
-  CardAnzahlPlus():number{
+  CardAnzahlPlus(){
    
 
     this.cardAnzahl = this.cardAnzahl + 1;
     
-    return this.cardAnzahl
+  
     
       }
     
@@ -53,7 +53,6 @@ set cardAnzahl(Zahl: number) {
       CardAnzahlMinus():number{
     
         
-    
     if(this.cardAnzahl == 0){
     
       this.cardAnzahl = 0;
@@ -64,6 +63,9 @@ set cardAnzahl(Zahl: number) {
     return this.cardAnzahl
     
           }
+
+
+ 
     
 
 

@@ -1,5 +1,5 @@
 import { Component, Input, Output } from '@angular/core';
-import { DatengeberService } from 'src/DatenService/datengeber.service';
+
 
 @Component({
   selector: 'app-header',
@@ -10,7 +10,7 @@ export class HeaderComponent {
 
 
 
-  constructor(public  dg:DatengeberService ){
+  constructor( ){
    
   }
 
@@ -34,7 +34,7 @@ export class HeaderComponent {
    this.Warenkorb = !this.Warenkorb;
    console.log(this.Warenkorb);
 
-   console.log(this.dg.cardAnzahlen)
+
 
 
   }
