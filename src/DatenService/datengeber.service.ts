@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { first } from 'rxjs';
+import { WarenkorbComponent } from 'src/app/warenkorb/warenkorb.component';
+
 
 
 
@@ -10,59 +12,50 @@ import { first } from 'rxjs';
 
 export class DatengeberService {
 
-  cardAnzahlen: number[] = [];
-
+cardAnzahlen: number[] = [];
 WarenkorbAnzahl:number = 0;
 ZwischenAnzahl:number= 0;
 
-FirstAdd?:boolean;
+
+KostenStartBetrag:number =0;
+KostenZwischenBetrag:number=0;
+KostenAbsolut:number = 0;
 
 
 
-  constructor() {}
+
+constructor(){
+}
 
 
-  AddToWarenkorb(x:number){
 
-    this.FirstAdd = true;
-    console.log('Erster Warenkorb wurde hinzugefügt, FirstAdd ist nun True')
 
-if(this.FirstAdd == true){
+KostenRechner(cardAnzahl:number, ProduktIndex:number){
 
-this.ZwischenAnzahl = this.cardAnzahlen[x];
-console.log( 'Die Card-Anzahl ist nun:' + this.cardAnzahlen[x]);
+  this.KostenStartBetrag = this.KostenStartBetrag + cardAnzahl * ProduktIndex;
+  this.KostenAbsolut = this.KostenStartBetrag;
 
-this.WarenkorbAnzahl = this.ZwischenAnzahl;
 
-this.FirstAdd = false;
-console.log('FirstAdd ist wieder' + ' '+ this.FirstAdd)
-console.log('Zwischen' + this.ZwischenAnzahl)
 
 }
 
-return this.ZwischenAnzahl = this.cardAnzahlen[x]
+
+  AddToWarenkorb(cardAnzahl:number){
+
+  
+    this.ZwischenAnzahl = this.ZwischenAnzahl+ cardAnzahl;
+    this.WarenkorbAnzahl = this.ZwischenAnzahl;
+
+
+   
+
+    return this.ZwischenAnzahl;
 
   }
 
+  ClearWarenkorbAnzahl(){
 
-  AddToWarenkorbSecond(x:number, cardAnzahl:number){
-
-
-    if(this.FirstAdd == false){
-
-
-      this.WarenkorbAnzahl += cardAnzahl;
-  
-    }
-
-    
-  
-
+    this.WarenkorbAnzahl = this.WarenkorbAnzahl - this.WarenkorbAnzahl;
   }
-
-
-
-
-
 
 }

@@ -2,6 +2,7 @@ import { outputAst } from '@angular/compiler';
 import { Component, Input } from '@angular/core';
 import * as internal from 'stream';
 import { DatengeberService } from 'src/DatenService/datengeber.service';
+import { threadId } from 'worker_threads';
 
 
 
@@ -21,10 +22,28 @@ export class ShopCardComponent {
   @Input()  preis:number = 0;
 
 
+  
 
- @Input() Kosten?:number;
+
+Produkt:{name:string, bild:string, preis:number}[] = [
+  {name: 'Cosiness', bild: 'assets/glas1.png', preis: 5},
+  {name: 'Intesity', bild: 'assets/glas2.png', preis: 7},
+  {name: 'Passion', bild: 'assets/glas3.png',  preis: 9},
+  {name: 'Intesity', bild: 'assets/glas2.png', preis: 7},
+  {name: 'Cosiness', bild: 'assets/glas1.png', preis: 5},
+  {name: 'Passion', bild: 'assets/glas3.png',  preis: 9},
+  {name: 'Passion', bild: 'assets/glas3.png',  preis: 9},
+  {name: 'Intesity', bild: 'assets/glas2.png', preis: 7},
+  
+]
+
+
+
+
+
 
  public index: number;
+
 
  constructor(public dg: DatengeberService) { 
  this.index = this.dg.cardAnzahlen.length;
@@ -40,17 +59,16 @@ set cardAnzahl(Zahl: number) {
   this.dg.cardAnzahlen[this.index] = Zahl;
 }
 
+
   CardAnzahlPlus(){
    
-
     this.cardAnzahl = this.cardAnzahl + 1;
-    
+
   
-    
       }
     
     
-      CardAnzahlMinus():number{
+      CardAnzahlMinus(){
     
         
     if(this.cardAnzahl == 0){
@@ -60,13 +78,12 @@ set cardAnzahl(Zahl: number) {
     } else{
       this.cardAnzahl = this.cardAnzahl - 1;
     }
-    return this.cardAnzahl
+    
     
           }
 
 
- 
-    
+
 
 
 
