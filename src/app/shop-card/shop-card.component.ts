@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 import * as internal from 'stream';
 import { DatengeberService } from 'src/DatenService/datengeber.service';
 import { threadId } from 'worker_threads';
+import { Produkt } from 'src/app/shop-card/Produkt';
 
 
 
@@ -14,29 +15,12 @@ import { threadId } from 'worker_threads';
 })
 export class ShopCardComponent {
 
-
+  public produkte = Produkt;
 
 
   @Input()  name:string = '';
   @Input()  img:string = '';
   @Input()  preis:number = 0;
-
-
-  
-
-
-Produkt:{name:string, bild:string, preis:number}[] = [
-  {name: 'Cosiness', bild: 'assets/glas1.png', preis: 5},
-  {name: 'Intesity', bild: 'assets/glas2.png', preis: 7},
-  {name: 'Passion', bild: 'assets/glas3.png',  preis: 9},
-  {name: 'Intesity', bild: 'assets/glas2.png', preis: 7},
-  {name: 'Cosiness', bild: 'assets/glas1.png', preis: 5},
-  {name: 'Passion', bild: 'assets/glas3.png',  preis: 9},
-  {name: 'Passion', bild: 'assets/glas3.png',  preis: 9},
-  {name: 'Intesity', bild: 'assets/glas2.png', preis: 7},
-  
-]
-
 
 
 
