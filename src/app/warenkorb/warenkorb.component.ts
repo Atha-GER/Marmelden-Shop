@@ -4,7 +4,8 @@ import { DatengeberService } from 'src/DatenService/datengeber.service';
 @Component({
   selector: 'app-warenkorb',
   templateUrl: './warenkorb.component.html',
-  styleUrls: ['./warenkorb.component.scss']
+  styleUrls: ['./warenkorb.component.scss'],
+  
 })
 export class WarenkorbComponent {
 

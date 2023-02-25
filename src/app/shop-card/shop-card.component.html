@@ -1,4 +1,4 @@
-<div  class="shop-card">
+<div  [ngClass]="{'shop-card-buy-ColorChange': WarenkorbAktive == true}" class="shop-card">
 
 
 
@@ -17,7 +17,7 @@
 
 
 
-    <div class="shop-card-addmore">
+    <div  [ngClass]="{'shop-card-buy-ColorChange': WarenkorbAktive == true}" class="shop-card-addmore">
 
 <div (click)="CardAnzahlMinus()" class="shop-card-addmore-minus">
     <h2>-</h2>
@@ -39,7 +39,7 @@
 
 
     
-    <div (click)="dg.KostenRechner(cardAnzahl, produkte[index].preis)" (click)="dg.AddToWarenkorb(cardAnzahl)" class="shop-card-buy">
+    <div (click)="WarenkorbChange()" (click)="dg.KostenRechner(cardAnzahl, produkte[index].preis)" (click)="dg.AddToWarenkorb(cardAnzahl)" class="shop-card-buy">
         <h2 class="shop-card-buy-text">Warenkorb</h2>
     </div>
 

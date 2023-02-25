@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 import * as internal from 'stream';
 import { DatengeberService } from 'src/DatenService/datengeber.service';
 import { threadId } from 'worker_threads';
-import { Produkt } from 'src/app/shop-card/Produkt';
+import { Produkt } from 'src/ExterneModule/Produkt';
 
 
 
@@ -27,6 +27,7 @@ export class ShopCardComponent {
 
 
  public index: number;
+ WarenkorbAktive:boolean = false;
 
 
  constructor(public dg: DatengeberService) { 
@@ -41,6 +42,14 @@ get cardAnzahl() {
 
 set cardAnzahl(Zahl: number) {
   this.dg.cardAnzahlen[this.index] = Zahl;
+}
+
+
+
+WarenkorbChange(){
+
+return this.WarenkorbAktive = true;
+
 }
 
 
